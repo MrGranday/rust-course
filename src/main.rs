@@ -43,6 +43,15 @@ fn add(x: i32, y: i32) -> i32 {
     x + y
 }
 
+// Note there are Singed and Unsinged
+
+//i8 and u8
+//Size in (bytes) are byte 1
+//i8 ---- min -128   max 127
+//u8-----min 0     max 255
+// and we have ( i16-u16  i32-u32  i64 u64  i128  u128  isize  usize)
+//isize and usize it is depending on the system
+
 fn main() {
     let result = add(3, 4);
 
