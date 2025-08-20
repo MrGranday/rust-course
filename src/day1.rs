@@ -47,6 +47,7 @@ fn add(x: i32, y: i32) -> i32 {
 
 fn main(){
     let result = add(3,4);
-    
+
+    print(result);
 
 }
