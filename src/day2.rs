@@ -38,3 +38,22 @@ pub fn conditional_loop() {
 }
 
 // these both loops can be exit by using "break"
+
+// Topic: Functions
+//
+// Program requirements:
+// * Displays your first and last name
+//
+// Notes:
+// * Use a function to display your first name
+// * Use a function to display your last name
+// * Use the println macro to display messages to the terminal
+
+pub fn first_name() {
+    let first_name = "Osman Ghani ";
+    println!("{:?}", first_name);
+}
+pub fn last_name() {
+    let last_name = "Granday";
+    println!("{:?}", last_name);
+}

@@ -1,3 +1,4 @@
+// for using another file in the main file to execute we use "mod" and the name of the file
 mod day1;
 mod day2;
 
@@ -22,4 +23,7 @@ fn main() {
     //for conditional loop
     day2::conditional_loop();
     println!("this is the conditional loop");
+
+    day2::first_name();
+    day2::last_name();
 }
