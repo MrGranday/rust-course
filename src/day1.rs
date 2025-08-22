@@ -1,3 +1,5 @@
+// use std::fmt;
+
 // DAY 1
 // High-level language features without performance penalties
 //program behaviors can be enforced
@@ -39,7 +41,7 @@
 
 //function
 //can return and accept data
-fn add(x: i32, y: i32) -> i32 {
+pub fn add(x: i32, y: i32) -> i32 {
     x + y
 }
 
@@ -55,7 +57,7 @@ fn add(x: i32, y: i32) -> i32 {
 // the println macro
 // println!(add(4, 5));
 
-fn this_for_print_macro() {
+pub fn this_for_print_macro() -> () {
     let life = 42;
     println!("hello");
     println!("{}", life);
