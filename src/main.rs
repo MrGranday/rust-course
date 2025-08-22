@@ -1,3 +1,5 @@
+// use std::fmt;
+
 // DAY 1
 // High-level language features without performance penalties
 //program behaviors can be enforced
@@ -55,7 +57,7 @@ fn add(x: i32, y: i32) -> i32 {
 // the println macro
 // println!(add(4, 5));
 
-fn this_for_print_macro() {
+fn this_for_print_macro() -> () {
     let life = 42;
     println!("hello");
     println!("{}", life);
@@ -67,6 +69,18 @@ fn this_for_print_macro() {
     println!("{life} {}", " this is the end user display version");
 }
 
+// DAY2
+// Control flow using 'if'
+
+fn control_flow() -> () {
+    let a = 99;
+
+    if a > 99 {
+        println!("big number");
+    } else {
+        println!("small number ")
+    }
+}
 fn main() {
     //DAY 1
     //this is for add function
@@ -76,4 +90,8 @@ fn main() {
     //this is for macro print
     let result_for_macro = this_for_print_macro();
     println!("{:?}", result_for_macro);
+
+    //for the control flow
+    let control_result = control_flow();
+    println!("{:#?} {}", control_result, "this is for the control flow ");
 }
