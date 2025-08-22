@@ -1,4 +1,18 @@
 // for using another file in the main file to execute we use "mod" and the name of the file
+// the functions that u are using it should be public it means it should be "pub"
+// if you do not write "pub" in the begging of the function start it will be privet
+//e.g.
+
+//private function
+// fn () {
+
+// }
+
+//public function
+// pub fn () {
+
+// }
+
 mod day1;
 mod day2;
 
