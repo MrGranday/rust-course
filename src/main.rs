@@ -52,8 +52,21 @@ fn add(x: i32, y: i32) -> i32 {
 // and we have ( i16-u16  i32-u32  i64 u64  i128  u128  isize  usize)
 //isize and usize it is depending on the system
 
-fn main() {
-    let result = add(3, 4);
+// the println macro
+// println!(add(4, 5));
 
+fn this_for_print_macro() {
+    let life = 42;
+    println!("hello");
+    println!("{}", life);
+}
+
+fn main() {
+    //this is for add function
+    let result = add(3, 4);
     print!("{}", result);
+
+    //this is for macro print
+    let result_for_macro = this_for_print_macro();
+    println!("{:?}", result_for_macro);
 }
