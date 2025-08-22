@@ -27,3 +27,14 @@ pub fn infinite_loop() {
         a = a + 1;
     }
 }
+
+// the conditional loop
+pub fn conditional_loop() {
+    let mut a = 0;
+    while a != 5 {
+        println!("{:?}", a);
+        a = a + 1;
+    }
+}
+
+// these both loops can be exit by using "break"

@@ -17,5 +17,9 @@ fn main() {
 
     // for infinite loop
     day2::infinite_loop();
-    println!(" {}", "this is for the infinite loop")
+    println!(" {}", "this is for the infinite loop");
+
+    //for conditional loop
+    day2::conditional_loop();
+    println!("this is the conditional loop");
 }
