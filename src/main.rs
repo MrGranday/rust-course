@@ -59,12 +59,19 @@ fn this_for_print_macro() {
     let life = 42;
     println!("hello");
     println!("{}", life);
+    // IF WE see we can print this variable in other two ways also
+    // this is the debug version of the println
+    println!("{life :?}{}", "this is the debug version");
+
+    // we can use the end user display version also
+    println!("{life} {}", " this is the end user display version");
 }
 
 fn main() {
+    //DAY 1
     //this is for add function
     let result = add(3, 4);
-    print!("{}", result);
+    println!("{}", result);
 
     //this is for macro print
     let result_for_macro = this_for_print_macro();
