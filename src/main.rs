@@ -45,4 +45,5 @@ fn main() {
     //DAY3
     // for the sum of two numbers
     day3::the_result_of_two_numbers();
+    day3::display_boolean();
 }
