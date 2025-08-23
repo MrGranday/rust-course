@@ -47,4 +47,7 @@ fn main() {
     day3::the_result_of_two_numbers();
     day3::display_boolean();
     day3::flow_control();
+    //we give the values for both value_1 and value_2 in this
+    let the_result = day3::arithmetic(4, 5);
+    println!("{:?}", the_result);
 }

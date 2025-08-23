@@ -63,3 +63,21 @@ pub fn flow_control() {
         println!("{}", "the number is 5 ")
     }
 }
+
+// basic arithmetic
+
+pub fn arithmetic(value_1: i32, value_2: i32) -> i32 {
+    // using this ->i32 because we return int
+    //this will take two parameters fo the arithmetics
+    //
+    //
+    // these are basic arithmetics
+    // let sum = 2 + 2;
+    // let subtraction = 10 - 5;
+    // let division = 10 / 2;
+    // let multiplication = 5 * 4;
+    // let rem = 6 % 4;
+
+    value_1 - value_2
+    // this function return the subtraction of two numbers
+}
