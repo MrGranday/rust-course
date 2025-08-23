@@ -15,6 +15,7 @@
 
 mod day1;
 mod day2;
+mod day3;
 
 fn main() {
     //DAY 1
@@ -40,4 +41,8 @@ fn main() {
 
     day2::first_name();
     day2::last_name();
+
+    //DAY3
+    // for the sum of two numbers
+    day3::the_result_of_two_numbers();
 }
