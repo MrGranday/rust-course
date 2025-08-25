@@ -1,1 +1,1 @@
-# rust-course
+# rust-course!
