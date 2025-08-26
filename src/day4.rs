@@ -13,3 +13,13 @@ pub fn match_exp() {
         false => println!("this is false "),
     }
 }
+
+pub fn match_int() {
+    let some_int = 3;
+    match some_int {
+        1 => print!("this is one "),
+        2 => print!("this is two "),
+        3 => print!("this is three"),
+        _ => print!("it another number "),
+    }
+}

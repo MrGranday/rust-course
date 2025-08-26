@@ -59,4 +59,5 @@ fn main() {
     println!("start of DAY4");
     // match expression
     day4::match_exp();
+    day4::match_int();
 }
