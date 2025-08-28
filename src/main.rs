@@ -17,6 +17,7 @@ mod day1;
 mod day2;
 mod day3;
 mod day4;
+mod day5;
 
 fn main() {
     //DAY 1
@@ -60,4 +61,6 @@ fn main() {
     // match expression
     day4::match_exp();
     day4::match_int();
+    //DAY5
+    day5::print_on_no();
 }
