@@ -20,3 +20,13 @@ pub fn print_on_no() {
         }
     }
 }
+// using while loop
+
+pub fn le_loop() {
+    // creating mut variable that i would change the value later
+    let mut value = 1;
+    while value <= 3 {
+        println!("{:?}", value);
+        value = value + 1;
+    }
+}
