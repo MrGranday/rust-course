@@ -22,6 +22,7 @@ mod day5;
 fn main() {
     //DAY 1
     println!("start of DAY1");
+
     //this is for add function
     day1::add(3, 4);
     // println!("{}", result);
@@ -30,7 +31,9 @@ fn main() {
     day1::this_for_print_macro();
 
     //DAY2
+    println!("             ");
     println!("start of DAY2");
+
     //for the control flow
     day2::control_flow();
     println!(" {}", "this is for the control flow ");
@@ -47,7 +50,9 @@ fn main() {
     day2::last_name();
 
     //DAY3
+    println!("             ");
     println!("start of DAY3");
+
     // for the sum of two numbers
     day3::the_result_of_two_numbers();
     day3::display_boolean();
@@ -57,11 +62,17 @@ fn main() {
     println!("{:?}", the_result);
 
     //DAY4
+    println!("             ");
     println!("start of DAY4");
+
     // match expression
     day4::match_exp();
     day4::match_int();
     //DAY5
+    println!("             ");
+    println!("start of DAY5");
+
     day5::print_on_no();
     day5::le_loop();
+    day5::while_loop();
 }
