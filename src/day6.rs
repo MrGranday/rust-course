@@ -40,6 +40,7 @@
 enum Directions {
     Left,
     Right,
+    // Up,
 }
 pub fn which_direction() {
     let go = Directions::Left;
@@ -47,4 +48,38 @@ pub fn which_direction() {
         Directions::Left => println!("go Left"),
         Directions::Right => println!("go Right "),
     }
+}
+//
+//
+//Activity
+// Topic: Working with an enum
+//
+// Program requirements:
+// * Prints the name of a color to the terminal
+//
+// Notes:
+// * Use an enum with color names as variants
+// * Use a function to print the color name
+// * The function must use the enum as a parameter
+// * Use a match expression to determine which color
+//   name to print
+
+enum Colors {
+    Green,
+    Red,
+    Blue,
+}
+
+fn print_colors_names(colors: Colors) {
+    match colors {
+        Colors::Blue => println!("this is blue"),
+        Colors::Green => println!("this is green"),
+        Colors::Red => println!("this is red"),
+    }
+}
+
+pub fn main() {
+    print_colors_names(Colors::Blue);
+    print_colors_names(Colors::Red);
+    print_colors_names(Colors::Green);
 }

@@ -82,4 +82,5 @@ fn main() {
     println!("start of DAY6");
 
     day6::which_direction();
+    day6::main();
 }
