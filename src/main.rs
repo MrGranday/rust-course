@@ -18,6 +18,7 @@ mod day2;
 mod day3;
 mod day4;
 mod day5;
+mod day6;
 
 fn main() {
     //DAY 1
@@ -75,4 +76,10 @@ fn main() {
     day5::print_on_no();
     day5::le_loop();
     day5::while_loop();
+
+    //DAY6
+    println!("             ");
+    println!("start of DAY6");
+
+    day6::which_direction();
 }
