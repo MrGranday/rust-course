@@ -38,3 +38,18 @@
 // use struct when more then 2 or 3 fields
 //
 //Demo
+pub fn working_with_tuples() {
+    let coordinates = (2, 3);
+    println!("{:?},{:?}", coordinates.0, coordinates.1);
+
+    let (x, y) = (2, 3);
+    println!("{:?},{:?}", x, y);
+
+    //*the best practice is to name every variable that can be better for understanding  */
+    let (name, age) = ("osman ", 20);
+
+    //*it shouldnt be like this  */
+    let favorites = ("red", 2, "kabul", "pizza", "park");
+    let city = favorites.2;
+    let place = favorites.4;
+}
