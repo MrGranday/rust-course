@@ -120,3 +120,76 @@ pub fn the_shipping() {
 //structs deals with multiple pieces of data
 //all fields must be present to create a struct
 //fields can be accessed using a dot(.)
+//
+//
+//struct demo
+// Topic: Organizing similar data using structs
+//
+// Requirements:
+// * Print the flavor of a drink and it's fluid ounces
+//
+// Notes:
+// * Use an enum to create different flavors of drinks
+enum Flavor {
+    Orange,
+    Grape,
+    Apple,
+}
+// * Use a struct to store drink flavor and fluid ounce information
+struct Fluid {
+    Orange: f64,
+    Grape: f64,
+    Apple: f64,
+}
+// * Use a function to print out the drink flavor and ounces
+pub fn drinks_fluid() {
+    println!("first way to do it");
+    println!("     ");
+    let flavor = Flavor::Apple;
+    let fluids = Fluid {
+        Orange: 3.5,
+        Grape: 4.5,
+        Apple: 5.5,
+    };
+    // * Use a match expression to print the drink flavor
+    match flavor {
+        Flavor::Apple => println!("this is Apple flavor and {:?} Ounces", fluids.Apple),
+        Flavor::Grape => println!("this is Grape flavor and {:?} Ounces", fluids.Grape),
+        Flavor::Orange => println!("this is Orange flavor and {:?} Ounces", fluids.Orange),
+    }
+}
+//
+//
+//
+//we can create this in another way also the first way above is hardcode we can use parameters also
+
+enum Flavors {
+    Orange,
+    Grape,
+    Apple,
+}
+
+struct Drinks {
+    flavor: Flavors,
+    fluid_oz: f64,
+}
+
+fn printing_the_drink(drink: Drinks) {
+    match drink.flavor {
+        Flavors::Apple => println!("this is apple flavor"),
+        Flavors::Orange => println!("this is orange flavor"),
+        Flavors::Grape => println!("this is grape flavor"),
+    };
+
+    println!("oz: {:?}", drink.fluid_oz)
+}
+
+pub fn main2() {
+    println!("     ");
+    println!("second way to do it");
+    let drink1 = Drinks {
+        flavor: Flavors::Apple,
+        fluid_oz: 8.5,
+    };
+    printing_the_drink(drink1);
+}

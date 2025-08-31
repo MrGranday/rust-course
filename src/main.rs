@@ -84,4 +84,6 @@ fn main() {
     day6::which_direction();
     day6::main();
     day6::the_shipping();
+    day6::drinks_fluid();
+    day6::main2();
 }
