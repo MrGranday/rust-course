@@ -1,6 +1,6 @@
 // day5
 
-// working with data
+// WORKING WITH DATA
 //
 //
 //enum/Enumeration
@@ -11,25 +11,26 @@
 // more robust programs
 //
 
-// enum Direction {
-//     up,
-//     down,
-//     Left,
-//     Right,
-// }
+enum Direction {
+    Up,
+    Down,
+    Left,
+    Right,
+}
 
 // if want to add a new variant to this direction"forward"
 //then this match function will no langer satisfied the all possibilities
 // we dont check the this will increase the  reliability of the code no bug will be created because every possibility will be checked
 
-// fn which_way(go: Direction) {
-//     match go {
-//         Direction::up => "up",
-//         Direction::down => "down",
-//         Direction::Left => "Left",
-//         Direction::Right => "Right",
-//     }
-// }
+fn which_way() {
+    let way = Direction::Down;
+    match way {
+        Direction::Up => "up",
+        Direction::Down => "down",
+        Direction::Left => "Left",
+        Direction::Right => "Right",
+    };
+}
 
 // enums can only be one variant at a time
 // more robust program when paired wit match function
@@ -83,3 +84,39 @@ pub fn main() {
     print_colors_names(Colors::Red);
     print_colors_names(Colors::Green);
 }
+
+//
+//
+//
+// struct
+//
+//
+// A type that contains multiple pieces of the data
+// all or nothing -cannot have some pieces of data and not others
+// Each piece of data is called a 'field '
+// make working with data easier
+// similar data can be grouped together
+//
+//
+struct ShippingBox {
+    depth: i32,
+    width: i32,
+    height: i32,
+}
+
+pub fn the_shipping() {
+    let my_box = ShippingBox {
+        depth: 4,
+        width: 5,
+        height: 6,
+    };
+
+    println!("the box is {} units tall", my_box.height);
+    println!("the box is {} units width", my_box.width);
+    println!("the box is {} units depth", my_box.depth);
+}
+//
+//
+//structs deals with multiple pieces of data
+//all fields must be present to create a struct
+//fields can be accessed using a dot(.)

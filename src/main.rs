@@ -83,4 +83,5 @@ fn main() {
 
     day6::which_direction();
     day6::main();
+    day6::the_shipping();
 }
