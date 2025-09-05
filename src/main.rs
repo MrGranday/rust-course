@@ -19,6 +19,7 @@ mod day3;
 mod day4;
 mod day5;
 mod day6;
+mod day7;
 
 fn main() {
     //DAY 1
@@ -86,4 +87,9 @@ fn main() {
     day6::the_shipping();
     day6::drinks_fluid();
     day6::main2();
+
+    //DAY7
+    println!("             ");
+    println!("start of DAY7");
+    day7::coord();
 }

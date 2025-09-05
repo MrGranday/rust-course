@@ -38,7 +38,7 @@
 // use struct when more then 2 or 3 fields
 //
 //Demo
-pub fn working_with_tuples() {
+fn working_with_tuples() {
     let coordinates = (2, 3);
     println!("{:?},{:?}", coordinates.0, coordinates.1);
 
@@ -52,4 +52,30 @@ pub fn working_with_tuples() {
     let favorites = ("red", 2, "kabul", "pizza", "park");
     let city = favorites.2;
     let place = favorites.4;
+}
+
+// activity
+// Topic: Data management using tuples
+//
+// Requirements:
+// * Print whether the y-value of a cartesian coordinate is
+//   greater than 5, less than 5, or equal to 5
+//
+// Notes:
+// * Use a function that returns a tuple
+// * Destructure the return value into two variables
+// * Use an if..else if..else block to determine what to print
+
+fn tuple_cartesion() -> (i32, i32) {
+    (4, 5)
+}
+pub fn coord() {
+    let (x, y) = tuple_cartesion();
+    if y > 5 {
+        println!("this is >5");
+    } else if y < 5 {
+        println!("this is <5");
+    } else {
+        println!("this is =5");
+    }
 }
