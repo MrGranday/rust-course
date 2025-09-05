@@ -148,3 +148,19 @@ pub fn my_num_expression() {
 //best to not use more then two or three levels
 
 //Demo
+enum Access {
+    Admin,
+    Manager,
+    User,
+    Guest,
+}
+pub fn the_level_system() {
+    // secret file: admin only
+    //the use access level is determines in here
+    let access_level = Access::Guest;
+    let can_access_file = match access_level {
+        Access::Admin => true,
+        _ => false,
+    };
+    println!("{}{:?}", " the access level is : ", can_access_file);
+}
