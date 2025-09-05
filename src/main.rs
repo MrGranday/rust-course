@@ -92,4 +92,5 @@ fn main() {
     println!("             ");
     println!("start of DAY7");
     day7::coord();
+    day7::my_num_expression();
 }

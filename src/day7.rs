@@ -79,3 +79,72 @@ pub fn coord() {
         println!("this is =5");
     }
 }
+
+//Expressions
+//
+//
+// Rust is an expression-based language
+//must things are evaluated and return some value
+//expression values coalesce to a single point
+//can be used for nesting logic
+pub fn my_num_expression() {
+    let my_num = 3;
+    let is_lt_5 = if my_num < 5 { true } else { false };
+
+    // we can achieve the same result without using the if else expression in here
+    let this_is_second = my_num < 5;
+
+    // these both are the same the above is using the if else statement to get the result if it is true or false
+    // but the seconde on is just using the variable and comparing it and storing the true or false
+    println!("{:?}{:?}", is_lt_5, this_is_second);
+    // in here the result will be true  in both version the result will be true
+    println!("we can do the same with match expressions ");
+
+    let my_num2 = 3;
+    let message = match my_num2 {
+        1 => "hello",
+        _ => "hi",
+    };
+
+    println!("{}{:?}", "this is for the match expression: ", message);
+
+    // it is possible to nest the expression as many times
+
+    //for example
+
+    println!("using with the enum ");
+    //
+    enum Menu {
+        Burger,
+        Drinks,
+        Fries,
+    }
+
+    let paid = true;
+    let item = Menu::Drinks;
+    let drink_type = "water";
+    let order_placed = match item {
+        Menu::Drinks => {
+            if drink_type == "water" {
+                true
+            } else {
+                false
+            }
+        }
+        _ => true,
+    };
+    if paid == true {
+        println!("he paid: ")
+    } else {
+        println!(" he did pay: ")
+    };
+    println!("{}{:?}", "yes i what to buy this: ", order_placed,);
+}
+
+//
+//
+// Expressions allow nested logic
+//if and match expression can be nested
+//best to not use more then two or three levels
+
+//Demo
