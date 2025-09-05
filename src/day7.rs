@@ -164,3 +164,28 @@ pub fn the_level_system() {
     };
     println!("{}{:?}", " the access level is : ", can_access_file);
 }
+
+// Activity
+
+// Topic: Working with expressions
+//
+// Requirements:
+// * Print "its big" if a variable is > 100
+// * Print "its small" if a variable is <= 100
+//
+// Notes:
+// * Use a boolean variable set to the result of
+//   an if..else expression to store whether the value
+//   is > 100 or <= 100
+// * Use a function to print the messages
+// * Use a match expression to determine which message
+//   to print
+pub fn this_big_num() {
+    let value = 100;
+    let result = if value > 100 { true } else { false };
+
+    match result {
+        true => println!("it small: "),
+        _ => println!("it big: "),
+    };
+}
