@@ -94,3 +94,13 @@
 // *    display_light(&dull);
 
 // * }
+
+//
+//
+//*Recap */
+// Memory must be managed in some way to prevent leaks
+//Rust uses "Ownership " to accomplish memory management
+//the "Owner" of data must clean uo the memory
+//this occurs automatically at the end of the scope
+//Default behavior is to "move" memory to new owner
+//Use an ampersand(&) to allow code to "borrow " memory
