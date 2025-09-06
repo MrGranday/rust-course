@@ -104,3 +104,29 @@
 //this occurs automatically at the end of the scope
 //Default behavior is to "move" memory to new owner
 //Use an ampersand(&) to allow code to "borrow " memory
+
+//*Demo */
+struct Book {
+    rating: i32,
+    pages: i32,
+}
+
+fn display_rating(book: &Book) {
+    println!("the rating is = {:?}", book.rating);
+}
+
+fn display_pages(book: &Book) {
+    println!("the pages are = {:?}", book.pages)
+}
+
+pub fn to_display_both() {
+    // if dont use borrowing it will give us compiler error
+    // to use the (book) variable for the second time we borrow it
+    // so the ownership dont transfer from (to display_both)
+    let book = Book {
+        pages: 100,
+        rating: 5,
+    };
+    display_pages(&book);
+    display_rating(&book);
+}

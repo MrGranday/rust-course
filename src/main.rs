@@ -96,4 +96,9 @@ fn main() {
     day7::my_num_expression();
     day7::the_level_system();
     day7::this_big_num();
+
+    //DAY8
+    println!("             ");
+    println!("start of DAY8");
+    day8::to_display_both();
 }
