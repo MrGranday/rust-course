@@ -32,6 +32,7 @@
 //Rust utilizes an "ownership" model to manage memory
 //the "owner"of memory is responsible for cleaning up the memory
 // memory can either be "moved" or "borrowed"
+
 //*Example of - Move */
 //
 //
@@ -40,7 +41,8 @@
 //*      Bright,
 // *    Dull,
 // *}
-
+// 3 when it is moved to this function now it is owned by this function
+// 4 when it is here and the functions is finished executing this "light" and then the "the light will be deleted "
 //* fn display_light(light: Light) {
 // *    match light {
 // *       Light::Bright => println!("bright"),
@@ -48,8 +50,47 @@
 // *      }
 // *}
 
+// 1 first the dull light is owned by this function
 // *fn main() {
+// 5 now this "let dull " is not available for the next time executing because the new owner
+//display_light delete this when it was finished executing this
 // *    let dull = Light::Dull;
+// 2 then it moved the dull to display_light function and the ownership is moved
 // *    display_light(dull);
+// 6 so there for the next time this will not run it will give you error
 // *    display_light(dull);
+// * }
+
+// For this we have solution we use Borrowing
+
+//*Example of - Borrow */
+//
+//
+// her we use "&" it means borrowing data or referencing data
+
+// *enum Light {
+//*      Bright,
+// *    Dull,
+// *}
+// 3 when it is borrowed to this function the  owner is still the main function
+// 4 it will one time execute it by borrowing
+//* fn display_light(light: &Light) {
+// *    match light {
+// *       Light::Bright => println!("bright"),
+// *       Light::Dull => println!("dull"),
+// *      }
+// *}
+
+// 1 first the dull light is owned by this function
+// *fn main() {
+// 5 now this "let dull " is  available for the next time executing because the owner
+//is still the main function and it was borrowed
+// *    let dull = Light::Dull;
+// 2 then it moved the dull to display_light function and the ownership is moved
+// *    display_light(&dull);
+// 6 so there for the next time this will run it will not give you error because it was borrowed
+// 7 so the dull was not deleted because the main function was not fully execute
+// when it goes to the end and the main function is finished then it will delete the dull
+// *    display_light(&dull);
+
 // * }
