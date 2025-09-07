@@ -1,1 +1,5 @@
 /target
+
+# Ignore Windows executables and debug files
+*.exe
+*.pdb
