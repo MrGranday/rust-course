@@ -174,10 +174,18 @@ struct Temperature {
     degree: f32,
 }
 impl Temperature {
+    // we can also use(temp: Temperature) but we are referencing to (&self) self is as you all know Temperature
     fn display_temp(&self) {
         println!("this is {:?}", self.degree);
     }
 }
 pub fn to_display_f() {
-    let temp = Temperature:: ;
+    let temp = Temperature { degree: 88.8 };
+
+    // we can now access the display_temp by this because it is in the impl block of Temperature
+    Temperature::display_temp(&temp);
+    // and we can also use it in this way by writhing the name of variable and using(.) to access the fn
+    temp.display_temp();
+
+    //*both works prefect */
 }

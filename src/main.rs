@@ -102,4 +102,5 @@ fn main() {
     println!("start of DAY8");
     day8::to_display_both();
     day8::to_display_quantity();
+    day8::to_display_f();
 }
