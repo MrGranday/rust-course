@@ -170,22 +170,50 @@ pub fn to_display_quantity() {
 //Demo
 //*impl */
 // it means implementation
+// Define a struct (a box of data) that stores a temperature value
 struct Temperature {
-    degree: f32,
+    degree: f32, // one field: degree (floating point number)
 }
+
+// Implementation block = add functions to Temperature
 impl Temperature {
-    // we can also use(temp: Temperature) but we are referencing to (&self) self is as you all know Temperature
+    // This is an "associated function"
+    // It does not need self because it makes a NEW Temperature
+    // "Self" (big S) means "Temperature type"
+    fn freezing() -> Self {
+        // Return a new Temperature object with degree = 10.8
+        Self { degree: 10.8 }
+        // Same as: fn freezing()->Temperature
+        // Temperature { degree: 10.8 }
+    }
+
+    // This is a "method"
+    // It works on an existing Temperature object
+    // "&self" means we borrow the object so we can read it
     fn display_temp(&self) {
-        println!("this is {:?}", self.degree);
+        // "self.degree" means: get the degree value of this object
+        println!("this is {}", self.degree);
     }
 }
+
+// A public function to test everything
 pub fn to_display_f() {
+    // Make a new Temperature object with degree = 88.8
     let temp = Temperature { degree: 88.8 };
 
-    // we can now access the display_temp by this because it is in the impl block of Temperature
+    // Two ways to call the display_temp method:
+
+    // 1) Explicit way: we pass a reference (&temp) ourselves
     Temperature::display_temp(&temp);
-    // and we can also use it in this way by writhing the name of variable and using(.) to access the fn
+    //* */ Both methods work perfectly*/
+    // 2) Shorthand way: just call it with dot notation
+    // Rust automatically passes "&temp" here
+    //* */ Both methods work perfectly*/
     temp.display_temp();
 
-    //*both works prefect */
+    // Now use the associated function "freezing" to make a cold Temperature
+    let cold = Temperature::freezing();
+
+    // Call display_temp on that object too
+    cold.display_temp();
 }
