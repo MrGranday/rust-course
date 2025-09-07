@@ -130,3 +130,54 @@ pub fn to_display_both() {
     display_pages(&book);
     display_rating(&book);
 }
+//
+//
+
+//*Activity */
+// Topic: Ownership
+//
+// Requirements:
+// * Print out the quantity and id number of a grocery item
+//
+// Notes:
+// * Use a struct for the grocery item
+// * Use two i32 fields for the quantity and id number
+// * Create a function to display the quantity, with the struct as a parameter
+// * Create a function to display the id number, with the struct as a parameter
+
+struct Grocery {
+    id_number: i32,
+    quantity: i32,
+}
+
+fn display_id_number(grocery: &Grocery) {
+    println!("the id number is = {:?}", grocery.id_number);
+}
+
+fn display_quantity(grocery: &Grocery) {
+    println!("the quantity is = {:?}", grocery.quantity);
+}
+pub fn to_display_quantity() {
+    let grocery = Grocery {
+        id_number: 1232,
+        quantity: 2,
+    };
+
+    display_id_number(&grocery);
+    display_quantity(&grocery);
+}
+
+//Demo
+//*impl */
+// it means implementation
+struct Temperature {
+    degree: f32,
+}
+impl Temperature {
+    fn display_temp(&self) {
+        println!("this is {:?}", self.degree);
+    }
+}
+pub fn to_display_f() {
+    let temp = Temperature:: ;
+}
