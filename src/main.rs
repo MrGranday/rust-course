@@ -103,4 +103,5 @@ fn main() {
     day8::to_display_both();
     day8::to_display_quantity();
     day8::to_display_f();
+    day8::display_the_boxes();
 }

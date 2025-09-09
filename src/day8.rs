@@ -180,6 +180,7 @@ impl Temperature {
     // This is an "associated function"
     // It does not need self because it makes a NEW Temperature
     // "Self" (big S) means "Temperature type"
+    //freezing is a constructor (it makes a new Temperature). That’s why it uses Self.
     fn freezing() -> Self {
         // Return a new Temperature object with degree = 10.8
         Self { degree: 10.8 }
@@ -216,4 +217,52 @@ pub fn to_display_f() {
 
     // Call display_temp on that object too
     cold.display_temp();
+}
+
+//*Activity */
+// Topic: Implementing functionality with the impl keyword
+//
+// Requirements:
+// * Print the characteristics of a shipping box
+// * Must include dimensions, weight, and color
+//
+// Notes:
+// * Use a struct to encapsulate the box characteristics
+// * Use an enum for the box color
+// * Implement functionality on the box struct to create a new box
+// * Implement functionality on the box struct to print the characteristics
+#[derive(Debug)] // <- this allows printing BoxColor with {:?}
+enum BoxColor {
+    Red,
+    Blue,
+    Black,
+    Yellow,
+}
+
+#[derive(Debug)] // <- this allows printing ShippingBox with {:?}
+struct ShippingBox {
+    dimension_x: i32,
+    dimension_y: i32,
+    weight: i32,
+    color: BoxColor,
+}
+
+impl ShippingBox {
+    fn create_black_box() -> Self {
+        Self {
+            dimension_x: 3,
+            dimension_y: 4,
+            weight: 50,
+            color: BoxColor::Black,
+        }
+    }
+
+    fn display_created_box(&self) {
+        println!("this box is {:?}", self);
+    }
+}
+
+pub fn display_the_boxes() {
+    let black_box = ShippingBox::create_black_box();
+    black_box.display_created_box();
 }
