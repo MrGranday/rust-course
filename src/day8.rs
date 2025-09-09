@@ -231,38 +231,100 @@ pub fn to_display_f() {
 // * Use an enum for the box color
 // * Implement functionality on the box struct to create a new box
 // * Implement functionality on the box struct to print the characteristics
-#[derive(Debug)] // <- this allows printing BoxColor with {:?}
-enum BoxColor {
-    Red,
+// #[derive(Debug)] // <- this allows printing BoxColor with {:?}
+// enum BoxColor {
+//     Red,
+//     Blue,
+//     Black,
+//     Yellow,
+// }
+
+// #[derive(Debug)] // <- this allows printing ShippingBox with {:?}
+// struct ShippingBox {
+//     dimension_x: i32,
+//     dimension_y: i32,
+//     weight: i32,
+//     color: BoxColor,
+// }
+
+// impl ShippingBox {
+//     fn create_black_box() -> Self {
+//         Self {
+//             dimension_x: 3,
+//             dimension_y: 4,
+//             weight: 50,
+//             color: BoxColor::Black,
+//         }
+//     }
+
+//     fn display_created_box(&self) {
+//         println!("this box is {:?}", self);
+//     }
+// }
+
+// pub fn display_the_boxes() {
+//     let black_box = ShippingBox::create_black_box();
+//     black_box.display_created_box();
+// }
+
+enum Colors {
     Blue,
-    Black,
+    Red,
     Yellow,
 }
+impl Colors {
+    fn print(&self) {
+        match self {
+            Colors::Blue => println!("this is Blue Box: "),
+            Colors::Red => println!("this is Red Box: "),
+            Colors::Yellow => println!("this is Yellow Box: "),
+        }
+    }
+}
 
-#[derive(Debug)] // <- this allows printing ShippingBox with {:?}
+struct Dimensions {
+    width: f64,
+    hight: f64,
+    depth: f64,
+}
+
+impl Dimensions {
+    fn print(&self) {
+        println!(
+            "dimensions: {:?}, {:?}, {:?}",
+            self.depth, self.hight, self.width
+        );
+    }
+}
+
 struct ShippingBox {
-    dimension_x: i32,
-    dimension_y: i32,
-    weight: i32,
-    color: BoxColor,
+    color: Colors,
+    weight: f64,
+    dimensions: Dimensions,
 }
 
 impl ShippingBox {
-    fn create_black_box() -> Self {
+    fn new(color: Colors, dimensions: Dimensions, weight: f64) -> Self {
         Self {
-            dimension_x: 3,
-            dimension_y: 4,
-            weight: 50,
-            color: BoxColor::Black,
+            color,
+            dimensions,
+            weight,
         }
     }
-
-    fn display_created_box(&self) {
-        println!("this box is {:?}", self);
+    fn print(&self) {
+        self.color.print();
+        self.dimensions.print();
+        println!("the weight is : {:?}", self.weight)
     }
 }
 
 pub fn display_the_boxes() {
-    let black_box = ShippingBox::create_black_box();
-    black_box.display_created_box();
+    let box_dimensions = Dimensions {
+        width: 5.9,
+        hight: 4.5,
+        depth: 1.3,
+    };
+
+    let the_box = ShippingBox::new(Colors::Blue, box_dimensions, 56.9);
+    the_box.print();
 }
