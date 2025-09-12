@@ -8,11 +8,23 @@
 
 //*(Example) */
 pub fn vec_new() {
-    //*we have declared a vector */
-    let my_vec = vec![1, 2, 3];
+    //*we have CREATED a vector with the data you know to push  */
+    let mut my_vec = vec![1, 2, 3];
 
-    //*we have created a vector */
-    let mut my_vec = Vec::new();
+    //*we have CREATE a NEW EMPTY vector that has [0] length nothing inside but it will give you error saying[Vec{unknown}] */
+    //*so we must push some data to it that it know the data tpe if string or number */
+    let mut my_vec2 = Vec::new();
+    my_vec2.push(1);
+
+    //*but we can CREATE a NEW EMPTY vector in this way also  that has [0] length nothing inside but it will give you error saying[Vec{unknown}]*/
+    //*so we must push some data to it that it know the data tpe if string or number */
+    let mut my_vec1 = vec![];
+    my_vec1.push(1);
+
+    //*and if you create it like this and specify the the type of VECTOR then even if it is empty it will not give you error */
+    //*but it will give you warnings about that this vector is empty */
+    let mut my_vec3: Vec<i32> = vec![];
+    let mut my_vec4: Vec<i32> = Vec::new();
 
     //*we have pushed values  */
     println!("{:?}", my_vec.push(1));
