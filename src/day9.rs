@@ -6,6 +6,8 @@
 // used for lists of information
 // can add , remove , and traverse the entries
 
+//
+
 //*(Example) */
 pub fn vec_new() {
     //*we have CREATED a vector with the data you know to push  */
@@ -27,12 +29,17 @@ pub fn vec_new() {
     let mut my_vec4: Vec<i32> = Vec::new();
 
     //*we have pushed values  */
-    println!("{:?}", my_vec.push(1));
-    println!("{:?}", my_vec.push(3));
+    my_vec.push(1);
+    my_vec.push(3);
 
     //*we have pop the values */
-    println!("{:?}", my_vec.pop());
+    println!("the last item we pop or eliminate:  {:?}", my_vec.pop());
 
     //*the length of the vector */
-    println!("{:?}", my_vec.len());
+    println!("this is the length of my_vec :{:?}", my_vec.len());
+
+    //*now iterating over the vector  */
+    for num in my_vec {
+        println!(" printing all the data in the vector one by one :{:?}", num)
+    }
 }
