@@ -62,3 +62,28 @@ pub fn the_score() {
         println!("the score are : {:?}", test.score);
     }
 }
+
+// Topic: Vectors
+//
+// Requirements:
+// * Print 10, 20, "thirty", and 40 in a loop
+// * Print the total number of elements in a vector
+//
+// Notes:
+// * Use a vector to store 4 numbers
+// * Iterate through the vector using a for..in loop
+// * Determine whether to print the number or print "thirty" inside the loop
+// * Use the .len() function to print the number of elements in a vector
+
+pub fn working_on_vec() {
+    let my_vec = vec![10, 20, 31, 30, 40];
+    println!("this loop: ");
+    for num in &my_vec {
+        if num == &30 {
+            println!("{:?}", "Thirty");
+        } else {
+            println!("{:?}", num)
+        }
+    }
+    println!("the number of elements :{:?}", my_vec.len())
+}

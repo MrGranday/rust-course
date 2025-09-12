@@ -111,4 +111,5 @@ fn main() {
     println!("start of DAY9");
     day9::vec_new();
     day9::the_score();
+    day9::working_on_vec();
 }
