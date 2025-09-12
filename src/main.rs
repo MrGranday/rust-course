@@ -21,6 +21,7 @@ mod day5;
 mod day6;
 mod day7;
 mod day8;
+mod day9;
 
 fn main() {
     //DAY 1
@@ -104,4 +105,9 @@ fn main() {
     day8::to_display_quantity();
     day8::to_display_f();
     day8::display_the_boxes();
+
+    //DAY8
+    println!("             ");
+    println!("start of DAY9");
+    day9::vec_new();
 }
