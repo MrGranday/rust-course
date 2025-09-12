@@ -43,3 +43,22 @@ pub fn vec_new() {
         println!(" printing all the data in the vector one by one :{:?}", num)
     }
 }
+
+//
+//*Demo */
+struct Test {
+    score: i32,
+}
+
+pub fn the_score() {
+    let my_score = vec![
+        Test { score: 91 },
+        Test { score: 98 },
+        Test { score: 45 },
+        Test { score: 65 },
+        Test { score: 45 },
+    ];
+    for test in my_score {
+        println!("the score are : {:?}", test.score);
+    }
+}
