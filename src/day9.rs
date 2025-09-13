@@ -87,3 +87,32 @@ pub fn working_on_vec() {
     }
     println!("the number of elements :{:?}", my_vec.len())
 }
+
+//Data Type
+//*Strings */
+//
+//
+// two commonly used types of strings
+//String - owned
+//&str - borrowed String slice
+// we must use an owned (String) to store in a struct
+// using &str when [passing] to a function
+
+fn print_string(the_data: &str) {
+    println!("{:?}", the_data)
+}
+
+pub fn print_the_string() {
+    //*one way to do it  */
+    print_string("this is one way to do it: ");
+
+    //* another way to do it */
+    let with_to_owned_fn = "this is another way to do it".to_owned();
+
+    //*another way to do do is using String from */
+    let with_string_from = String::from("this way also ");
+
+    //*then we can call it in the function  */
+    print_string(&with_string_from);
+    print_string(&with_to_owned_fn);
+}

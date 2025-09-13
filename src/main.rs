@@ -112,4 +112,5 @@ fn main() {
     day9::vec_new();
     day9::the_score();
     day9::working_on_vec();
+    day9::print_the_string();
 }
