@@ -132,3 +132,7 @@ pub fn print_the_employee() {
 
     let _emp = Employee { name: emp_name };
 }
+
+// *Strings are automatically borrowed*/
+//*Use .to_owned() or String::from() to create an owned copy of a string slice  */
+//*Use an owned String when storing in a struct */
