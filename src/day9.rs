@@ -116,3 +116,19 @@ pub fn print_the_string() {
     print_string(&with_string_from);
     print_string(&with_to_owned_fn);
 }
+
+//if want to use with struct
+struct Employee {
+    name: String,
+    //*we use String not &str in the struct */
+}
+
+pub fn print_the_employee() {
+    //*we can do this also and another way */
+    let emp_name = "osman".to_owned();
+
+    //*in this way also */
+    let emp_name1 = String::from("osman");
+
+    let _emp = Employee { name: emp_name };
+}
