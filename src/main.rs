@@ -114,4 +114,5 @@ fn main() {
     day9::working_on_vec();
     day9::print_the_string();
     day9::print_the_employee();
+    day9::the_line_item();
 }

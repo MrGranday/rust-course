@@ -136,3 +136,28 @@ pub fn print_the_employee() {
 // *Strings are automatically borrowed*/
 //*Use .to_owned() or String::from() to create an owned copy of a string slice  */
 //*Use an owned String when storing in a struct */
+//
+//
+//
+//*Demo */
+struct LineItem {
+    name: String,
+    count: i32,
+}
+
+pub fn the_line_item() {
+    let receipt = vec![
+        LineItem {
+            name: "cereal".to_owned(),
+            count: 1,
+        },
+        LineItem {
+            name: String::from("fruit"),
+            count: 2,
+        },
+    ];
+
+    for items in receipt {
+        println!("name: {:?},  count: {:?}", items.name, items.count);
+    }
+}
