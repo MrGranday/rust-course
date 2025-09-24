@@ -14,6 +14,7 @@
 // }
 
 mod day1;
+mod day10;
 mod day2;
 mod day3;
 mod day4;
@@ -106,7 +107,7 @@ fn main() {
     day8::to_display_f();
     day8::display_the_boxes();
 
-    //DAY8
+    //DAY9
     println!("             ");
     println!("start of DAY9");
     day9::vec_new();
@@ -115,4 +116,9 @@ fn main() {
     day9::print_the_string();
     day9::print_the_employee();
     day9::the_line_item();
+
+    //DAY10
+    println!("             ");
+    println!("start of DAY10");
+    day10::print_info();
 }
